@@ -1,6 +1,29 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+module.exports = {
+  reactStrictMode: false,
+  swcMinify: false,
 
-module.exports = nextConfig
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
+  images: {
+    domains: ['tested.codemode.az'],
+    formats: ['image/avif', 'image/webp']
+  },
+
+  publicRuntimeConfig: {
+    staticFolder: '/static',
+  },
+
+  axios: {
+    baseURL: "https://jsonplaceholder.typicode.com"
+  },
+
+  i18n: {
+    locales: ["az", "en", "ru"],
+    defaultLocale: 'az',
+    localeDetection: false,
+    prefix: '',
+    directory: './locales'
+  }
+};
