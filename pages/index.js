@@ -49,7 +49,8 @@ const Home = () => {
             <li>EN</li>
           </a>
         </Link>
-        <button onClick={() => ToastStore.successToast("success blya")}>Show Toast</button>
+        <button onClick={() => ToastStore.successToast("Success blya")}>Show Success Toast</button>
+        <button onClick={() => ToastStore.errorToast("Error blya")}>Show Error Toast</button>
       </div>
     </>
   )
